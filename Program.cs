@@ -22,7 +22,9 @@ namespace Oficina.API
             builder.Services.AddScoped<IRepository<Cliente>, Repository<Cliente>>();
             builder.Services.AddScoped<IRepository<Endereco>, Repository<Endereco>>();
             builder.Services.AddScoped<IRepository<Veiculo>, Repository<Veiculo>>();
+            builder.Services.AddScoped<IRepository<Funcionario>, Repository<Funcionario>>();
             builder.Services.AddScoped<IService<Cliente>, ClienteService>();
+            builder.Services.AddScoped<IService<Funcionario>, FuncionarioService>();
             builder.Services.AddScoped<IEnderecoService, EnderecoService>();
             builder.Services.AddScoped<IVeiculoService, VeiculoService>();
             builder.Services.AddDbContext<OficinaContext>(options =>

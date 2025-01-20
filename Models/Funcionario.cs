@@ -6,6 +6,23 @@
         {
         }
 
+        public Funcionario(string cpf,
+                           string nome,
+                           DateTime? dataNascimento,
+                           int id,
+                           string senha,
+                           DateTime? dataContratacao,
+                           decimal? salario,
+                           DateTime? dataDemissao,
+                           string nomeCargo) : base(cpf, nome, dataNascimento, id)
+        {
+            Senha = senha;
+            DataContratacao = dataContratacao;
+            Salario = salario;
+            DataDemissao = dataDemissao;
+            NomeCargo = nomeCargo;
+        }
+
         public string Senha { get; set; }
         public DateTime? DataContratacao { get; set; }
         public decimal? Salario { get; set; }
